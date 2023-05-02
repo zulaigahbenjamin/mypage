@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        opacity: 0.5;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: black;
+
+    }
+
+    header {
+        padding-top: 30px;
+        padding-bottom: 13px;
+    }
+
+    body {
+        background-color: beige;
+    }
+
+    .center {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-decoration: solid;
+        font-size: large;
+    }
+
+    marquee {
+        background-color: black;
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: chocolate;
+        margin: auto;
+    }
+
+    .topnav a {
+        color: black;
+        font-size: medium;
+        text-align: center;
+        float: center;
+        padding: 14px 16px;
+        padding-bottom: 20px;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: rgb(230, 230, 204);
+
+    }
+
+    .topnav a.active {
+        background-color: rgb(224, 224, 187);
+        color: white;
+    }
+
+/** first flipcard*/
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        padding: 90px;
+        float:right;
+    }
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0,0,2);
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+    }
+
+    .flip-card-front {
+        color: black;
+    }
+
+    .flip-card-back {
+        background-color: beige;
+        color:black;
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-3 {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        padding: 90px;
+    }
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0,0,2);
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+    }
+
+    .flip-card-front {
+        color: black;
+    }
+
+    .flip-card-back {
+        background-color: beige;
+        color:black;
+        transform: rotateY(180deg);
+    }
+
+    /*second flipcard*/
+    .flip-card-2 {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        padding: 90px;
+    }
+    .flip-card-inner-2 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0,0,2);
+    }
+
+    .flip-card-2:hover .flip-card-inner-2 {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front-2,
+    .flip-card-back-2 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+    }
+
+    .flip-card-front-2 {
+        color: black;
+    }
+
+    .flip-card-back-2 {
+        background-color: beige;
+        color:black;
+        transform: rotateY(180deg);
+    }
+/*third flip*/
+    .flip-card-3 {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        padding: 90px;
+    }
+    .flip-card-inner-3 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0,0,2);
+    }
+
+    .flip-card-3:hover .flip-card-inner-3 {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front-3,
+    .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+    }
+
+    .flip-card-front {
+        color: black;
+    }
+
+    .flip-card-back {
+        background-color: beige;
+        color:black;
+        transform: rotateY(180deg);
+    }
+    .flip-card-3{
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        padding: 90px;
+        margin: left;
+    }
+    .flip-card-inner-3{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0,0,2);
+    }
+
+    .flip-card:hover .flip-card-inner-3 {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front-3,
+    .flip-card-back-3 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+    }
+
+    .flip-card-front-3 {
+        color: black;
+    }
+
+    .flip-card-back-3 {
+        background-color: beige;
+        color:black;
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-3 {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        padding: 90px;
+    }
+
+    .flip-card:hover .flip-card-inner-3 {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front-3,
+    .flip-card-back-3 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+    }
+
+    .flip-card-front-3 {
+        color: black;
+    }
+
+    .flip-card-back-3 {
+        background-color: beige;
+        color:black;
+        transform: rotateY(180deg);
+    }
+</style>
+<header>
+    <div class="container">
+        <img src="/images/R.jpg" alt="coats">
+        <div class="center">
+            <h1>ZUZU'S BOUTIQUE</h1>
+        </div>
+    </div>
+</header>
+
+<body>
+    <marquee>FREE SHIPPING FOR ORDERS OVER R700
+        FREE SHIPPING FOR ORDERS OVER R700
+        FREE SHIPPING FOR ORDERS OVER R700
+    </marquee>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="/images/download (3).jpg" alt="coats" width:300px; hieght:300px;>
+            </div>
+            <div class="flip-card-back">
+                <h2>Coats</h2>
+                <p>Price:R500</p>    
+            </div>
+        </div>
+    </div>
+    <div class="flip-card-2">
+        <div class="flip-card-inner-2">
+            <div class="flip-card-front-2">
+                <img src="/images/download (4).jpg" alt="boots" width:300px; hieght:300px;>
+            </div>
+            <div class="flip-card-back-2">
+                <h2>Boots</h2>
+                <p>Price:R400</p>    
+            </div>
+        </div>
+    </div>
+    <div class="flip-card-3">
+        <div class="flip-card-inner-3">
+            <div class="flip-card-front-3">
+                <img src="/images/download (y).jpg" alt="jewelry" width:300px; hieght:300px;>
+            </div>
+            <div class="flip-card-back-3">
+                <h2>Jewelry</h2>
+                <p>Price:R50</p>    
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
